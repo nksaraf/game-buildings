@@ -92,7 +92,6 @@ export default function BuildingGhost({ entity }: { entity: Components }) {
   //   }
   // })
 
-  const raycaster = useThree((s) => s.raycaster)
 
   useKeyboard({
     onKeyDown(e) {
@@ -106,6 +105,7 @@ export default function BuildingGhost({ entity }: { entity: Components }) {
       }
     }
   })
+  const raycaster = useThree((s) => s.raycaster)
 
   useFrame((three) => {
     if (state !== "building") {
